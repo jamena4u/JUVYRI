@@ -2,15 +2,19 @@
 
 Juvyri is a Ghanaian fashion brand specializing in stylish, modest and contemporary ready-to-wear clothing for women.
 
-This repo contains the JUVYRI marketing website: a single-page, mobile-first static site (no build step) with a warm, editorial aesthetic and a handful of scroll/hover/marquee animations.
+This repo contains the JUVYRI marketing website in two forms:
+
+- **Root (`index.html`, `css/`, `js/`)** — the original static, mobile-first prototype (no build step), warm editorial aesthetic with scroll/hover/marquee animations. Good for quickly previewing design changes.
+- **`wordpress-theme/juvyri/`** — the same design rebuilt as a custom WordPress theme, wired to Advanced Custom Fields so the site owner can add products, lookbook photos, testimonials and events, and edit all the homepage copy, entirely from wp-admin — no code edits needed day-to-day. **This is the version meant for the Hostinger + WordPress deployment.** See `wordpress-theme/README.md` for the install guide and what's editable where.
 
 ## Structure
 
 ```
-index.html        Page markup (hero, collection, story, lookbook, Instagram grid, testimonials, newsletter, footer)
-css/style.css      Design tokens, layout, responsive breakpoints, animations, prefers-reduced-motion overrides
-js/main.js         Mobile nav, scroll-reveal (IntersectionObserver), count-up stats, testimonial carousel, newsletter form, back-to-top
-assets/favicon.svg Monogram favicon
+index.html               Static prototype markup (hero, collection, story, lookbook, Instagram grid, testimonials, newsletter, footer)
+css/style.css             Design tokens, layout, responsive breakpoints, animations, prefers-reduced-motion overrides
+js/main.js                Mobile nav, scroll-reveal (IntersectionObserver), count-up stats, testimonial carousel, newsletter form, back-to-top
+assets/favicon.svg        Monogram favicon
+wordpress-theme/juvyri/   The deployable WordPress theme (PHP templates, ACF field registration, custom post types) — see wordpress-theme/README.md
 ```
 
 ## Running locally
