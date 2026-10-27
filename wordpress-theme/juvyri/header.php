@@ -43,13 +43,15 @@ $juvyri_top_lines = juvyri_lines( juvyri_setting( 'marquee_top',
 			<span></span><span></span><span></span>
 		</button>
 
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> home">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
-			<?php else : ?>
+		<?php if ( has_custom_logo() ) : ?>
+			<div class="logo">
+				<?php the_custom_logo(); // Outputs its own <a> — do not wrap this in another one, nested links are invalid HTML and break sizing. ?>
+			</div>
+		<?php else : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> home">
 				<span class="logo-text">Ju<span>V</span>y<span>R</span>i</span>
-			<?php endif; ?>
-		</a>
+			</a>
+		<?php endif; ?>
 
 		<div class="nav-backdrop" id="navBackdrop"></div>
 

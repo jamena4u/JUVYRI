@@ -85,7 +85,8 @@ h1, h2, h3 {
 
 .logo-text { font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; letter-spacing: .01em; color: var(--ink); }
 .logo-text span { color: var(--rust); }
-.logo img { max-height: 44px; width: auto; }
+.logo img, .custom-logo { max-height: 44px; width: auto; display: block; }
+.footer-brand .custom-logo { max-height: 64px; margin-bottom: 4px; }
 
 .primary-nav { display: flex; align-items: center; gap: 34px; }
 .primary-nav ul { display: flex; gap: 30px; }
